@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>GetShayna by BuildWith Angga</title>
+      <title>SIJARU</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
     <body>
@@ -108,6 +108,7 @@
             body .abovefold {
                 background: -webkit-gradient(linear, left top, left bottom, from(#F9FAFE), to(#FFFFFF));
                 background: linear-gradient(180deg, #F9FAFE 0%, #FFFFFF 100%);
+
             }
 
             body .abovefold .header {
@@ -157,7 +158,7 @@
             }
 
             body .abovefold .card {
-                background: #FFFFFF;
+                background: #ffffff;
                 -webkit-box-shadow: -32px 48px 60px rgba(22, 23, 28, 0.04);
                 box-shadow: -32px 48px 60px rgba(22, 23, 28, 0.04);
                 border-radius: 12px;
@@ -201,6 +202,11 @@
                 font-size: 12px;
                 line-height: 18px;
                 color: #8D8F98;
+            }
+
+            .examplethree {
+                background-color: #777799;
+                color: #ffffff;
             }
         </style>
 
@@ -272,8 +278,8 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="col-lg-6 mt-5 mt-md-0">
-                    <div class="card">
+                <div class="col-lg-6 mt-5 mt-md-0" >
+                    <div class="card ">
                         <div class="input-group mb-4">
                             <label for="input" class="w-100">
                                 <span class="input-title">NIP/NIK/NIDN</span>
