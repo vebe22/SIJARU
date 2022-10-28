@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function home()
     {
-        return view ('welcome');
+        return view ('master');
     }
 
     public function dashboard()
