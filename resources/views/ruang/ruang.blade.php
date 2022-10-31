@@ -3,14 +3,14 @@
 @section('js')
   
 @endsection
-@section('content')
+@section('header')
   <div class="content flex-column-fluid" id="kt_content">
     <!--begin::Row-->
     <div class="row g-5 g-lg-10">
       <!--begin::Col-->
       <div class="col-xl-12">
         <!--begin::Tiles Widget 2-->
-        <div class="card h-175px bgi-no-repeat bgi-size-contain h-200px mb-5 mb-lg-10"
+        <div class="card h-175px bgi-no-repeat bgi-size-contain h-200px mb-5"
           style="background-color: #1B283F; background-position: right; background-image:url('assets/media/svg/misc/taieri.svg')">
           <!--begin::Body-->
           <div class="card-body d-flex flex-column justify-content-between">
@@ -25,15 +25,70 @@
         <!--end::Tiles Widget 2-->
       </div>
       <!--end::Col-->
-    </div>
-    <!--end::Row-->
+  </div>
+  <!--end::Row-->
+@endsection
+@section('create')
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambah">
+  Tambah Baru
+</button>
+      
+<div class="modal fade" tabindex="-1" id="tambah">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Tambah Data Ruang</h5>
 
+          <!--begin::Close-->
+          <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+            <span class="svg-icon svg-icon-2x">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)"
+                  fill="black"></rect>
+                <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black"></rect>
+              </svg>
+            </span>
+          </div>
+          <!--end::Close-->
+        </div>
+
+        <div class="modal-body">
+          <form class="form fv-plugins-bootstrap5 fv-plugins-framework" action="#"
+            method="POST">@csrf
+            <!--begin::Input group-->
+            <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
+              <!--begin::Label-->
+              <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                <span class="required">Nama</span>
+                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                  data-bs-original-title="Nama Kategori Galeri" aria-label="Nama Galeri"></i>
+              </label>
+              <!--end::Label-->
+              <input value="{{ old('nama') }}" type="text" class="form-control form-control-solid"
+                placeholder="Masukan Nama Galeri" name="nama">
+              <div class="fv-plugins-message-container invalid-feedback"></div>
+            </div>
+            <!--begin::Actions-->
+            <div class="text-center pt-15">
+              <button type="reset" data-bs-dismiss="modal" class="btn btn-light me-3">Batalkan</button>
+              <button type="submit" class="btn btn-primary">
+                <span class="indicator-label">Simpan</span>
+              </button>
+            </div>
+            <!--end::Actions-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  @endsection
+  @section('content')
     <!--begin::Row-->
     <div class="row g-5 g-lg-10">
       <!--begin::Col-->
       <div class="col-xl-12 mb-5 mb-xl-10">
         <!--begin::Table Widget 6-->
-        <div class="card h-xl-100">
+        <div class="card h-xl-100 mt-5">
           <!--begin::Header-->
           <div class="card-header border-0 pt-5">
             <h3 class="card-title align-items-start flex-column">

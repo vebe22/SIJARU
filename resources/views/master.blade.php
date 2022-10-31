@@ -41,6 +41,8 @@
 				<!--begin::Wrapper-->
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					<!--begin::Header-->
+					@yield('header')
+					@yield('create')
 					<div id="kt_header" class="header">
 						<!--begin::Container-->
 						<div class="container-fluid d-flex flex-stack">
@@ -1022,124 +1024,9 @@
 										<!--end::Menu separator-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-5">
-											<a href="../../demo14/dist/account/overview.html" class="menu-link px-5">My Profile</a>
-										</div>
-										<!--end::Menu item-->
-										<!--begin::Menu item-->
-										<div class="menu-item px-5">
 											<a href="../../demo14/dist/apps/projects/list.html" class="menu-link px-5">
-												<span class="menu-text">My Projects</span>
-												<span class="menu-badge">
-													<span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-												</span>
+												<span class="menu-text">My Profile</span>
 											</a>
-										</div>
-										<!--end::Menu item-->
-										<!--begin::Menu item-->
-										<div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-											<a href="#" class="menu-link px-5">
-												<span class="menu-title">My Subscription</span>
-												<span class="menu-arrow"></span>
-											</a>
-											<!--begin::Menu sub-->
-											<div class="menu-sub menu-sub-dropdown w-175px py-4">
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/referrals.html" class="menu-link px-5">Referrals</a>
-												</div>
-												<!--end::Menu item-->
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/billing.html" class="menu-link px-5">Billing</a>
-												</div>
-												<!--end::Menu item-->
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/statements.html" class="menu-link px-5">Payments</a>
-												</div>
-												<!--end::Menu item-->
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/statements.html" class="menu-link d-flex flex-stack px-5">Statements
-													<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="View your statements"></i></a>
-												</div>
-												<!--end::Menu item-->
-												<!--begin::Menu separator-->
-												<div class="separator my-2"></div>
-												<!--end::Menu separator-->
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<div class="menu-content px-3">
-														<label class="form-check form-switch form-check-custom form-check-solid">
-															<input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
-															<span class="form-check-label text-muted fs-7">Notifications</span>
-														</label>
-													</div>
-												</div>
-												<!--end::Menu item-->
-											</div>
-											<!--end::Menu sub-->
-										</div>
-										<!--end::Menu item-->
-										<!--begin::Menu item-->
-										<div class="menu-item px-5">
-											<a href="../../demo14/dist/account/statements.html" class="menu-link px-5">My Statements</a>
-										</div>
-										<!--end::Menu item-->
-										<!--begin::Menu separator-->
-										<div class="separator my-2"></div>
-										<!--end::Menu separator-->
-										<!--begin::Menu item-->
-										<div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-											<a href="#" class="menu-link px-5">
-												<span class="menu-title position-relative">Language
-												<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-												<img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('assets/media/flags/united-states.svg') }}" alt="" /></span></span>
-											</a>
-											<!--begin::Menu sub-->
-											<div class="menu-sub menu-sub-dropdown w-175px py-4">
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/settings.html" class="menu-link d-flex px-5 active">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('assets/media/flags/united-states.svg') }}" alt="" />
-													</span>English</a>
-												</div>
-												<!--end::Menu item-->
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/settings.html" class="menu-link d-flex px-5">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('assets/media/flags/spain.svg') }}" alt="" />
-													</span>Spanish</a>
-												</div>
-												<!--end::Menu item-->
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/settings.html" class="menu-link d-flex px-5">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('assets/media/flags/germany.svg') }}" alt="" />
-													</span>German</a>
-												</div>
-												<!--end::Menu item-->
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/settings.html" class="menu-link d-flex px-5">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('assets/media/flags/japan.svg') }}" alt="" />
-													</span>Japanese</a>
-												</div>
-												<!--end::Menu item-->
-												<!--begin::Menu item-->
-												<div class="menu-item px-3">
-													<a href="../../demo14/dist/account/settings.html" class="menu-link d-flex px-5">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="{{ asset('assets/media/flags/france.svg') }}" alt="" />
-													</span>French</a>
-												</div>
-												<!--end::Menu item-->
-											</div>
-											<!--end::Menu sub-->
 										</div>
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
@@ -1226,30 +1113,6 @@
 															<span class="bullet bullet-dot"></span>
 														</span>
 														<span class="menu-title">Projects</span>
-													</a>
-													<!--end:Menu link-->
-												</div>
-												<!--end:Menu item-->
-												<!--begin:Menu item-->
-												<div class="menu-item">
-													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo14/dist/dashboards/online-courses.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Online Courses</span>
-													</a>
-													<!--end:Menu link-->
-												</div>
-												<!--end:Menu item-->
-												<!--begin:Menu item-->
-												<div class="menu-item">
-													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo14/dist/dashboards/marketing.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Marketing</span>
 													</a>
 													<!--end:Menu link-->
 												</div>
@@ -2391,90 +2254,6 @@
 														<!--end:Menu item-->
 													</div>
 													<!--end:Menu sub-->
-												</div>
-												<!--end:Menu item-->
-											</div>
-											<!--end:Menu sub-->
-										</div>
-										<!--end:Menu item-->
-										<!--begin:Menu item-->
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<!--begin:Menu link-->
-											<span class="menu-link">
-												<span class="menu-icon">
-													<!--begin::Svg Icon | path: icons/duotune/layouts/lay008.svg-->
-													<span class="svg-icon svg-icon-2">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
-															<path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</span>
-												<span class="menu-title">Widgets</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<!--end:Menu link-->
-											<!--begin:Menu sub-->
-											<div class="menu-sub menu-sub-accordion">
-												<!--begin:Menu item-->
-												<div class="menu-item">
-													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo14/dist/widgets/lists.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Lists</span>
-													</a>
-													<!--end:Menu link-->
-												</div>
-												<!--end:Menu item-->
-												<!--begin:Menu item-->
-												<div class="menu-item">
-													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo14/dist/widgets/statistics.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Statistics</span>
-													</a>
-													<!--end:Menu link-->
-												</div>
-												<!--end:Menu item-->
-												<!--begin:Menu item-->
-												<div class="menu-item">
-													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo14/dist/widgets/charts.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Charts</span>
-													</a>
-													<!--end:Menu link-->
-												</div>
-												<!--end:Menu item-->
-												<!--begin:Menu item-->
-												<div class="menu-item">
-													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo14/dist/widgets/mixed.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Mixed</span>
-													</a>
-													<!--end:Menu link-->
-												</div>
-												<!--end:Menu item-->
-												<!--begin:Menu item-->
-												<div class="menu-item">
-													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo14/dist/widgets/tables.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Tables</span>
-													</a>
-													<!--end:Menu link-->
 												</div>
 												<!--end:Menu item-->
 											</div>
