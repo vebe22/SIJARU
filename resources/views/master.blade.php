@@ -41,8 +41,6 @@
 				<!--begin::Wrapper-->
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					<!--begin::Header-->
-					@yield('header')
-					@yield('create')
 					<div id="kt_header" class="header">
 						<!--begin::Container-->
 						<div class="container-fluid d-flex flex-stack">

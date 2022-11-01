@@ -3,7 +3,7 @@
 @section('js')
   
 @endsection
-@section('header')
+@section('content')
   <div class="content flex-column-fluid" id="kt_content">
     <!--begin::Row-->
     <div class="row g-5 g-lg-10">
@@ -27,11 +27,13 @@
       <!--end::Col-->
   </div>
   <!--end::Row-->
-@endsection
-@section('create')
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambah">
+
+<button type="button" class="btn btn-light-info" data-bs-toggle="modal" data-bs-target="#tambah">
   Tambah Baru
 </button>
+<a href="{{ route('ruang.create') }}" type="button" class="btn btn-light-primary">
+  Add
+</a>
       
 <div class="modal fade" tabindex="-1" id="tambah">
     <div class="modal-dialog">
@@ -55,19 +57,73 @@
         <div class="modal-body">
           <form class="form fv-plugins-bootstrap5 fv-plugins-framework" action="#"
             method="POST">@csrf
-            <!--begin::Input group-->
+            <!--begin::Input group1-->
             <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
               <!--begin::Label-->
               <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
-                <span class="required">Nama</span>
+                <span class="required">Kode Ruang</span>
                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                  data-bs-original-title="Nama Kategori Galeri" aria-label="Nama Galeri"></i>
+                  data-bs-original-title="Kode Ruang" aria-label="Kode Ruang"></i>
               </label>
               <!--end::Label-->
-              <input value="{{ old('nama') }}" type="text" class="form-control form-control-solid"
-                placeholder="Masukan Nama Galeri" name="nama">
+              <input value="{{ old('kode_r') }}" type="text" class="form-control form-control-solid"
+                placeholder="Masukan Kode Ruang" name="kode_r">
               <div class="fv-plugins-message-container invalid-feedback"></div>
             </div>
+            <!--begin::Input group2-->
+            <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
+              <!--begin::Label-->
+              <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                <span class="required">Nama Ruang</span>
+                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                  data-bs-original-title="Nama Ruang" aria-label="Nama Ruang"></i>
+              </label>
+              <!--end::Label-->
+              <input value="{{ old('nama_r') }}" type="text" class="form-control form-control-solid"
+                placeholder="Masukan Nama Ruang" name="nama_r">
+              <div class="fv-plugins-message-container invalid-feedback"></div>
+            </div>
+            <!--begin::Input group3-->
+            <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
+              <!--begin::Label-->
+              <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                <span class="required">Kapasitas</span>
+                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                  data-bs-original-title="Kapasitas Ruang" aria-label="Kapasitas Ruang"></i>
+              </label>
+              <!--end::Label-->
+              <input value="{{ old('kapasitas') }}" type="text" class="form-control form-control-solid"
+                placeholder="Masukan Kapasitas Ruang" name="kapasitas">
+              <div class="fv-plugins-message-container invalid-feedback"></div>
+            </div>
+            <!--begin::Input group3-->
+            <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
+              <!--begin::Label-->
+              <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                <span class="required">Keterangan</span>
+                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                  data-bs-original-title="Keterangan" aria-label="Keterangan"></i>
+              </label>
+              <!--end::Label-->
+              <input value="{{ old('keterangan') }}" type="text" class="form-control form-control-solid"
+                placeholder="Masukan Keterangan" name="keterangan">
+              <div class="fv-plugins-message-container invalid-feedback"></div>
+            </div>
+            <!--begin::Input group4-->
+            <div class="d-flex flex-column mb-7 fv-row fv-plugins-icon-container">
+                <!--begin::Label-->
+                  <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                    <span class="required">Status</span>
+                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" data-bs-original-title="Status Ruang" aria-label="Status Ruang"></i>
+                  </label>
+                  <!--end::Label-->
+                  <select name="status" id="status" class="form-select form-control-solid">
+                    <option selected disabled>Pilih Status</option>
+                    <option value="1">Available</option>
+                    <option value="2">Not available</option>
+                  </select>
+                  <div class="fv-plugins-message-container invalid-feedback"></div>
+              </div>
             <!--begin::Actions-->
             <div class="text-center pt-15">
               <button type="reset" data-bs-dismiss="modal" class="btn btn-light me-3">Batalkan</button>
@@ -81,8 +137,8 @@
       </div>
     </div>
   </div>
-  @endsection
-  @section('content')
+
+ 
     <!--begin::Row-->
     <div class="row g-5 g-lg-10">
       <!--begin::Col-->

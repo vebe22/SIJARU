@@ -24,5 +24,6 @@ Route::get('/', [DashboardController::class, 'home'])->name('home');
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/ruang', [RuangController::class, 'index'])->name('ruang');
+Route::get('/create', [RuangController::class, 'create'])->name('ruang.create');
 
 
